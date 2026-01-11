@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Tinterra.Desktop.Test")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d3f95287e701514911430b2ac2a86d57cbd70358")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+716b3d8af6bf899b1ae59a26f2a481b8295c62e0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Tinterra.Desktop.Test")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Tinterra.Desktop.Test")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
