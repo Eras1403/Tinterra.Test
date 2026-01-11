@@ -2,8 +2,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Graph;
 using Microsoft.Identity.Web;
+using Microsoft.Kiota.Abstractions;
+using Microsoft.Kiota.Abstractions.Authentication;
 using System.Security.Claims;
-using System.Net.Http.Headers;
 using Tinterra.Application.Interfaces;
 
 namespace Tinterra.Infrastructure.Identity.Services;
@@ -22,19 +23,13 @@ public class GraphGroupResolver : IGroupResolver
     {
         _httpContextAccessor = httpContextAccessor;
         _cache = cache;
-        var authProvider = new DelegateAuthenticationProvider(async requestMessage =>
-        {
-            var accessToken = await tokenAcquisition
-                .GetAccessTokenForUserAsync(GroupScopes)
-                .ConfigureAwait(false);
-            requestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
-        });
+        var authProvider = new TokenAcquisitionAuthenticationProvider(tokenAcquisition);
         _graphServiceClient = new GraphServiceClient(authProvider);
     }
 
     public async Task<IReadOnlyCollection<string>> GetGroupObjectIdsAsync(string userObjectId, CancellationToken cancellationToken)
     {
-        if (_cache.TryGetValue(userObjectId, out IReadOnlyCollection<string> cached))
+        if (_cache.TryGetValue(userObjectId, out IReadOnlyCollection<string>? cached) && cached is not null)
         {
             return cached;
         }
@@ -66,5 +61,26 @@ public class GraphGroupResolver : IGroupResolver
         }, cancellationToken: cancellationToken).ConfigureAwait(false);
 
         return response?.Value?.Select(id => id.ToString()).ToList() ?? [];
+    }
+
+    private sealed class TokenAcquisitionAuthenticationProvider : IAuthenticationProvider
+    {
+        private readonly ITokenAcquisition _tokenAcquisition;
+
+        public TokenAcquisitionAuthenticationProvider(ITokenAcquisition tokenAcquisition)
+        {
+            _tokenAcquisition = tokenAcquisition;
+        }
+
+        public async Task AuthenticateRequestAsync(
+            RequestInformation request,
+            Dictionary<string, object>? additionalAuthenticationContext = null,
+            CancellationToken cancellationToken = default)
+        {
+            var accessToken = await _tokenAcquisition
+                .GetAccessTokenForUserAsync(GroupScopes)
+                .ConfigureAwait(false);
+            request.Headers.TryAdd("Authorization", $"Bearer {accessToken}");
+        }
     }
 }
