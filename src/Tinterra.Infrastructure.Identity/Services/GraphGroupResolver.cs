@@ -21,11 +21,8 @@ public class GraphGroupResolver : IGroupResolver
     {
         _httpContextAccessor = httpContextAccessor;
         _cache = cache;
-        _graphServiceClient = new GraphServiceClient(new DelegateAuthenticationProvider(async requestMessage =>
-        {
-            var token = await tokenAcquisition.GetAccessTokenForAppAsync(GroupScopes).ConfigureAwait(false);
-            requestMessage.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
-        }));
+        var credential = new TokenAcquisitionTokenCredentialAdapter(tokenAcquisition);
+        _graphServiceClient = new GraphServiceClient(credential, GroupScopes);
     }
 
     public async Task<IReadOnlyCollection<string>> GetGroupObjectIdsAsync(string userObjectId, CancellationToken cancellationToken)
