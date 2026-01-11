@@ -1,4 +1,5 @@
 using System;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
@@ -9,6 +10,13 @@ namespace Tinterra.Infrastructure.Persistence.DesignTime.Migrations;
 [Migration("20240914120000_InitialCreate")]
 public partial class InitialCreate : Migration
 {
+    private static readonly string[] ConfigurationItemsKeyEnvironmentRegionIndexColumns =
+        ["Key", "Environment", "Region"];
+    private static readonly string[] TenantGroupBundleMappingsTenantIdGroupObjectIdIndexColumns =
+        ["TenantId", "GroupObjectId"];
+    private static readonly string[] UserAllowedRegionsUserObjectIdRegionIndexColumns =
+        ["UserObjectId", "Region"];
+
     protected override void Up(MigrationBuilder migrationBuilder)
     {
         migrationBuilder.CreateTable(
@@ -141,18 +149,18 @@ public partial class InitialCreate : Migration
         migrationBuilder.CreateIndex(
             name: "IX_ConfigurationItems_Key_Environment_Region",
             table: "ConfigurationItems",
-            columns: new[] { "Key", "Environment", "Region" },
+            columns: ConfigurationItemsKeyEnvironmentRegionIndexColumns,
             unique: true);
 
         migrationBuilder.CreateIndex(
             name: "IX_TenantGroupBundleMappings_TenantId_GroupObjectId",
             table: "TenantGroupBundleMappings",
-            columns: new[] { "TenantId", "GroupObjectId" });
+            columns: TenantGroupBundleMappingsTenantIdGroupObjectIdIndexColumns);
 
         migrationBuilder.CreateIndex(
             name: "IX_UserAllowedRegions_UserObjectId_Region",
             table: "UserAllowedRegions",
-            columns: new[] { "UserObjectId", "Region" },
+            columns: UserAllowedRegionsUserObjectIdRegionIndexColumns,
             unique: true);
     }
 
