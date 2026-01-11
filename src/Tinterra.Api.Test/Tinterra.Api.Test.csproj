@@ -8,6 +8,7 @@
     <ProjectReference Include="..\Tinterra.Application\Tinterra.Application.csproj" />
     <ProjectReference Include="..\Tinterra.Domain\Tinterra.Domain.csproj" />
     <ProjectReference Include="..\Tinterra.Infrastructure.Identity\Tinterra.Infrastructure.Identity.csproj" />
+    <ProjectReference Include="..\Tinterra.Infrastructure.Persistence.DesignTime\Tinterra.Infrastructure.Persistence.DesignTime.csproj" />
     <ProjectReference Include="..\Tinterra.Infrastructure.Persistence.SqlServer\Tinterra.Infrastructure.Persistence.SqlServer.csproj" />
   </ItemGroup>
   <ItemGroup>
