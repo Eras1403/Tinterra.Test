@@ -770,7 +770,7 @@
           }
         }
       },
-      "Microsoft.OpenApi/2.3.0": {
+      "Microsoft.OpenApi/2.0.0": {
         "type": "package",
         "compile": {
           "lib/net8.0/Microsoft.OpenApi.dll": {
@@ -2241,10 +2241,10 @@
         "microsoft.kiota.serialization.text.nuspec"
       ]
     },
-    "Microsoft.OpenApi/2.3.0": {
-      "sha512": "5RZpjyt0JMmoc/aEgY9c1vE5pusdDGvkPl9qKIy9KFbRiIXD+w7gBJxX+unSjzzOcfgRoYxnO4okZyqDAL2WEw==",
+    "Microsoft.OpenApi/2.0.0": {
+      "sha512": "GGYLfzV/G/ct80OZ45JxnWP7NvMX1BCugn/lX7TH5o0lcVaviavsLMTxmFV2AybXWjbi3h6FF1vgZiTK6PXndw==",
       "type": "package",
-      "path": "microsoft.openapi/2.3.0",
+      "path": "microsoft.openapi/2.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2255,7 +2255,7 @@
         "lib/netstandard2.0/Microsoft.OpenApi.dll",
         "lib/netstandard2.0/Microsoft.OpenApi.pdb",
         "lib/netstandard2.0/Microsoft.OpenApi.xml",
-        "microsoft.openapi.2.3.0.nupkg.sha512",
+        "microsoft.openapi.2.0.0.nupkg.sha512",
         "microsoft.openapi.nuspec"
       ]
     },
@@ -2570,6 +2570,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 10.0.1",
       "Microsoft.Identity.Web >= 4.3.0",
       "Microsoft.Identity.Web.MicrosoftGraph >= 4.3.0",
+      "Microsoft.OpenApi >= 2.0.0",
       "Swashbuckle.AspNetCore >= 10.1.0",
       "Tinterra.Application >= 1.0.0",
       "Tinterra.Domain >= 1.0.0",
@@ -2656,6 +2657,10 @@
           "Microsoft.Identity.Web.MicrosoftGraph": {
             "target": "Package",
             "version": "[4.3.0, )"
+          },
+          "Microsoft.OpenApi": {
+            "target": "Package",
+            "version": "[2.0.0, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
@@ -3098,5 +3103,16 @@
         }
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "Warnung als Fehler: Ein Downgrade des Pakets \"Microsoft.OpenApi\" von 2.3.0 auf 2.0.0 wurde festgestellt. Verweisen Sie direkt aus dem Projekt auf das Paket, um eine andere Version auszuwählen. \r\n Tinterra.Api.Test -> Swashbuckle.AspNetCore 10.1.0 -> Swashbuckle.AspNetCore.Swagger 10.1.0 -> Microsoft.OpenApi (>= 2.3.0) \r\n Tinterra.Api.Test -> Microsoft.OpenApi (>= 2.0.0)",
+      "libraryId": "Microsoft.OpenApi",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
 }

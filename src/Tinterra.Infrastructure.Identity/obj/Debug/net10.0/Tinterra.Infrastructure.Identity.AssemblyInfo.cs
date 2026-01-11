@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Tinterra.Infrastructure.Identity")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d3f95287e701514911430b2ac2a86d57cbd70358")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f3336aa136739214544a4c21294e32710873510f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Tinterra.Infrastructure.Identity")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Tinterra.Infrastructure.Identity")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
