@@ -5,24 +5,18 @@ using Tinterra.Domain.Enums;
 
 namespace Tinterra.Api.Test.Authorization;
 
-public class ConfigurationAuthorizationHandler : AuthorizationHandler<ConfigurationAuthorizationRequirement, ConfigurationItem>
+public class ConfigurationAuthorizationHandler(
+    ICurrentUserContext currentUser,
+    IPermissionEvaluator permissionEvaluator,
+    IUserProfileRepository userProfileRepository)
+    : AuthorizationHandler<ConfigurationAuthorizationRequirement, ConfigurationItem>
 {
     private const string AdminPermission = "Security.Admin";
     private const string PublishPermission = "Config.Publish";
 
-    private readonly ICurrentUserContext _currentUser;
-    private readonly IPermissionEvaluator _permissionEvaluator;
-    private readonly IUserProfileRepository _userProfileRepository;
-
-    public ConfigurationAuthorizationHandler(
-        ICurrentUserContext currentUser,
-        IPermissionEvaluator permissionEvaluator,
-        IUserProfileRepository userProfileRepository)
-    {
-        _currentUser = currentUser;
-        _permissionEvaluator = permissionEvaluator;
-        _userProfileRepository = userProfileRepository;
-    }
+    private readonly ICurrentUserContext _currentUser = currentUser;
+    private readonly IPermissionEvaluator _permissionEvaluator = permissionEvaluator;
+    private readonly IUserProfileRepository _userProfileRepository = userProfileRepository;
 
     protected override async Task HandleRequirementAsync(
         AuthorizationHandlerContext context,
