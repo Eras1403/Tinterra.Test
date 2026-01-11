@@ -63,14 +63,9 @@ public class GraphGroupResolver : IGroupResolver
         return response?.Value?.Select(id => id.ToString()).ToList() ?? [];
     }
 
-    private sealed class TokenAcquisitionAuthenticationProvider : IAuthenticationProvider
+    private sealed class TokenAcquisitionAuthenticationProvider(ITokenAcquisition tokenAcquisition) : IAuthenticationProvider
     {
-        private readonly ITokenAcquisition _tokenAcquisition;
-
-        public TokenAcquisitionAuthenticationProvider(ITokenAcquisition tokenAcquisition)
-        {
-            _tokenAcquisition = tokenAcquisition;
-        }
+        private readonly ITokenAcquisition _tokenAcquisition = tokenAcquisition;
 
         public async Task AuthenticateRequestAsync(
             RequestInformation request,

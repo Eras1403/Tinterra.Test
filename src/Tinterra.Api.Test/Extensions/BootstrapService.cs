@@ -10,7 +10,7 @@ public static class BootstrapService
     {
         using var scope = services.CreateScope();
         var db = scope.ServiceProvider.GetRequiredService<SqlServerDb>();
-        await db.Database.MigrateAsync(cancellationToken);
+         await db.Database.MigrateAsync(cancellationToken);
 
         if (await db.PermissionBundles.AnyAsync(cancellationToken))
         {

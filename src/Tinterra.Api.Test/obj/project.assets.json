@@ -1016,6 +1016,19 @@
           "bin/placeholder/Tinterra.Infrastructure.Identity.dll": {}
         }
       },
+      "Tinterra.Infrastructure.Persistence.DesignTime/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "Tinterra.Infrastructure.Persistence.SqlServer": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Tinterra.Infrastructure.Persistence.DesignTime.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tinterra.Infrastructure.Persistence.DesignTime.dll": {}
+        }
+      },
       "Tinterra.Infrastructure.Persistence.SqlServer/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
@@ -2558,6 +2571,11 @@
       "path": "../Tinterra.Infrastructure.Identity/Tinterra.Infrastructure.Identity.csproj",
       "msbuildProject": "../Tinterra.Infrastructure.Identity/Tinterra.Infrastructure.Identity.csproj"
     },
+    "Tinterra.Infrastructure.Persistence.DesignTime/1.0.0": {
+      "type": "project",
+      "path": "../Tinterra.Infrastructure.Persistence.DesignTime/Tinterra.Infrastructure.Persistence.DesignTime.csproj",
+      "msbuildProject": "../Tinterra.Infrastructure.Persistence.DesignTime/Tinterra.Infrastructure.Persistence.DesignTime.csproj"
+    },
     "Tinterra.Infrastructure.Persistence.SqlServer/1.0.0": {
       "type": "project",
       "path": "../Tinterra.Infrastructure.Persistence.SqlServer/Tinterra.Infrastructure.Persistence.SqlServer.csproj",
@@ -2575,6 +2593,7 @@
       "Tinterra.Application >= 1.0.0",
       "Tinterra.Domain >= 1.0.0",
       "Tinterra.Infrastructure.Identity >= 1.0.0",
+      "Tinterra.Infrastructure.Persistence.DesignTime >= 1.0.0",
       "Tinterra.Infrastructure.Persistence.SqlServer >= 1.0.0"
     ]
   },
@@ -2619,6 +2638,9 @@
             },
             "C:\\Users\\Denise\\Desktop\\Tinterra.Test\\src\\Tinterra.Infrastructure.Identity\\Tinterra.Infrastructure.Identity.csproj": {
               "projectPath": "C:\\Users\\Denise\\Desktop\\Tinterra.Test\\src\\Tinterra.Infrastructure.Identity\\Tinterra.Infrastructure.Identity.csproj"
+            },
+            "C:\\Users\\Denise\\Desktop\\Tinterra.Test\\src\\Tinterra.Infrastructure.Persistence.DesignTime\\Tinterra.Infrastructure.Persistence.DesignTime.csproj": {
+              "projectPath": "C:\\Users\\Denise\\Desktop\\Tinterra.Test\\src\\Tinterra.Infrastructure.Persistence.DesignTime\\Tinterra.Infrastructure.Persistence.DesignTime.csproj"
             },
             "C:\\Users\\Denise\\Desktop\\Tinterra.Test\\src\\Tinterra.Infrastructure.Persistence.SqlServer\\Tinterra.Infrastructure.Persistence.SqlServer.csproj": {
               "projectPath": "C:\\Users\\Denise\\Desktop\\Tinterra.Test\\src\\Tinterra.Infrastructure.Persistence.SqlServer\\Tinterra.Infrastructure.Persistence.SqlServer.csproj"

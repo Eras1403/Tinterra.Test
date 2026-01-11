@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Tinterra.Infrastructure.Persistence.DesignTime")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f3336aa136739214544a4c21294e32710873510f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f243d83db15badeded62f5e4ca708022db03514e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Tinterra.Infrastructure.Persistence.DesignTime")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Tinterra.Infrastructure.Persistence.DesignTime")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

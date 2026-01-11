@@ -4,3 +4,15 @@ C:\Users\Denise\Desktop\Tinterra.Test\src\Tinterra.Infrastructure.Identity\obj\D
 C:\Users\Denise\Desktop\Tinterra.Test\src\Tinterra.Infrastructure.Identity\obj\Debug\net10.0\Tinterra.Infrastructure.Identity.AssemblyInfo.cs
 C:\Users\Denise\Desktop\Tinterra.Test\src\Tinterra.Infrastructure.Identity\obj\Debug\net10.0\Tinterra.Infrastructure.Identity.csproj.CoreCompileInputs.cache
 C:\Users\Denise\Desktop\Tinterra.Test\src\Tinterra.Infrastructure.Identity\obj\Debug\net10.0\Tinterra.Infrastructure.Identity.sourcelink.json
+C:\Users\Denise\Desktop\Tinterra.Test\src\Tinterra.Infrastructure.Identity\bin\Debug\net10.0\Tinterra.Infrastructure.Identity.deps.json
+C:\Users\Denise\Desktop\Tinterra.Test\src\Tinterra.Infrastructure.Identity\bin\Debug\net10.0\Tinterra.Infrastructure.Identity.dll
+C:\Users\Denise\Desktop\Tinterra.Test\src\Tinterra.Infrastructure.Identity\bin\Debug\net10.0\Tinterra.Infrastructure.Identity.pdb
+C:\Users\Denise\Desktop\Tinterra.Test\src\Tinterra.Infrastructure.Identity\bin\Debug\net10.0\Tinterra.Application.dll
+C:\Users\Denise\Desktop\Tinterra.Test\src\Tinterra.Infrastructure.Identity\bin\Debug\net10.0\Tinterra.Domain.dll
+C:\Users\Denise\Desktop\Tinterra.Test\src\Tinterra.Infrastructure.Identity\bin\Debug\net10.0\Tinterra.Application.pdb
+C:\Users\Denise\Desktop\Tinterra.Test\src\Tinterra.Infrastructure.Identity\bin\Debug\net10.0\Tinterra.Domain.pdb
+C:\Users\Denise\Desktop\Tinterra.Test\src\Tinterra.Infrastructure.Identity\obj\Debug\net10.0\Tinterra.A9ABB9D0.Up2Date
+C:\Users\Denise\Desktop\Tinterra.Test\src\Tinterra.Infrastructure.Identity\obj\Debug\net10.0\Tinterra.Infrastructure.Identity.dll
+C:\Users\Denise\Desktop\Tinterra.Test\src\Tinterra.Infrastructure.Identity\obj\Debug\net10.0\refint\Tinterra.Infrastructure.Identity.dll
+C:\Users\Denise\Desktop\Tinterra.Test\src\Tinterra.Infrastructure.Identity\obj\Debug\net10.0\Tinterra.Infrastructure.Identity.pdb
+C:\Users\Denise\Desktop\Tinterra.Test\src\Tinterra.Infrastructure.Identity\obj\Debug\net10.0\ref\Tinterra.Infrastructure.Identity.dll
