@@ -41,7 +41,9 @@ builder.Services.AddScoped<IGroupResolver, GraphGroupResolver>();
 builder.Services.AddScoped<IPermissionEvaluator, PermissionEvaluator>();
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-    .AddMicrosoftIdentityWebApi(builder.Configuration.GetSection("AzureAd"));
+    .AddMicrosoftIdentityWebApi(builder.Configuration.GetSection("AzureAd"))
+    .EnableTokenAcquisitionToCallDownstreamApi()
+    .AddInMemoryTokenCaches();
 
 builder.Services.AddAuthorization(options =>
 {
