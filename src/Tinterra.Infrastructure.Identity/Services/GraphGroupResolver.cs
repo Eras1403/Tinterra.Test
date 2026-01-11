@@ -3,6 +3,7 @@ using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Graph;
 using Microsoft.Identity.Web;
 using System.Security.Claims;
+using System.Net.Http.Headers;
 using Tinterra.Application.Interfaces;
 
 namespace Tinterra.Infrastructure.Identity.Services;
@@ -21,8 +22,14 @@ public class GraphGroupResolver : IGroupResolver
     {
         _httpContextAccessor = httpContextAccessor;
         _cache = cache;
-        var credential = new TokenAcquisitionTokenCredentialAdapter(tokenAcquisition);
-        _graphServiceClient = new GraphServiceClient(credential, GroupScopes);
+        var authProvider = new DelegateAuthenticationProvider(async requestMessage =>
+        {
+            var accessToken = await tokenAcquisition
+                .GetAccessTokenForUserAsync(GroupScopes)
+                .ConfigureAwait(false);
+            requestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
+        });
+        _graphServiceClient = new GraphServiceClient(authProvider);
     }
 
     public async Task<IReadOnlyCollection<string>> GetGroupObjectIdsAsync(string userObjectId, CancellationToken cancellationToken)
@@ -53,7 +60,7 @@ public class GraphGroupResolver : IGroupResolver
 
     private async Task<List<string>> FetchGroupsFromGraphAsync(string userObjectId, CancellationToken cancellationToken)
     {
-        var response = await _graphServiceClient.Users[userObjectId].GetMemberGroups.PostAsync(new()
+        var response = await _graphServiceClient.Users[userObjectId].GetMemberGroups.PostAsGetMemberGroupsPostResponseAsync(new()
         {
             SecurityEnabledOnly = false
         }, cancellationToken: cancellationToken).ConfigureAwait(false);
