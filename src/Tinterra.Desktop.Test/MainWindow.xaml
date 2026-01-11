@@ -1,0 +1,86 @@
+<Window
+    x:Class="Tinterra.Desktop.Test.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:Microsoft.UI.Xaml.Controls"
+    xmlns:local="using:Tinterra.Desktop.Test">
+
+    <Grid Padding="12">
+        <controls:TabView>
+            <controls:TabViewItem Header="Configurations">
+                <Grid RowDefinitions="Auto,*" RowSpacing="8">
+                    <StackPanel Orientation="Horizontal" Spacing="8">
+                        <Button Content="Refresh" />
+                        <Button Content="Edit" />
+                        <Button Content="Publish" />
+                        <Button Content="Delete" />
+                    </StackPanel>
+                    <ListView Grid.Row="1" ItemsSource="{Binding ConfigurationItems}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate x:DataType="local:ConfigurationItemViewModel">
+                                <StackPanel>
+                                    <TextBlock Text="{x:Bind Key}" FontWeight="SemiBold" />
+                                    <TextBlock Text="{x:Bind Summary}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Grid>
+            </controls:TabViewItem>
+            <controls:TabViewItem Header="Admin">
+                <ScrollViewer>
+                    <StackPanel Spacing="12">
+                        <TextBlock Text="Tenants" FontWeight="SemiBold" />
+                        <StackPanel Orientation="Horizontal" Spacing="8">
+                            <Button Content="Add" />
+                            <Button Content="Enable/Disable" />
+                        </StackPanel>
+                        <ListView ItemsSource="{Binding Tenants}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate x:DataType="local:AllowedTenantViewModel">
+                                    <TextBlock Text="{x:Bind DisplayName}" />
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+
+                        <TextBlock Text="Permissions" FontWeight="SemiBold" />
+                        <ListView ItemsSource="{Binding Permissions}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate x:DataType="local:PermissionViewModel">
+                                    <TextBlock Text="{x:Bind Name}" />
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+
+                        <TextBlock Text="Bundles" FontWeight="SemiBold" />
+                        <ListView ItemsSource="{Binding Bundles}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate x:DataType="local:PermissionBundleViewModel">
+                                    <TextBlock Text="{x:Bind Name}" />
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+
+                        <TextBlock Text="Tenant -> Group -> Bundle Mappings" FontWeight="SemiBold" />
+                        <ListView ItemsSource="{Binding Mappings}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate x:DataType="local:TenantGroupBundleMappingViewModel">
+                                    <TextBlock Text="{x:Bind Description}" />
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+
+                        <TextBlock Text="User Profiles" FontWeight="SemiBold" />
+                        <ListView ItemsSource="{Binding UserProfiles}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate x:DataType="local:UserProfileViewModel">
+                                    <TextBlock Text="{x:Bind Description}" />
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackPanel>
+                </ScrollViewer>
+            </controls:TabViewItem>
+        </controls:TabView>
+    </Grid>
+</Window>
