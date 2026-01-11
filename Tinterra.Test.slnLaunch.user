@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Neues Profil",
+    "Projects": [
+      {
+        "Path": "src\\Tinterra.Api.Test\\Tinterra.Api.Test.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "src\\Tinterra.Desktop.Test\\Tinterra.Desktop.Test.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

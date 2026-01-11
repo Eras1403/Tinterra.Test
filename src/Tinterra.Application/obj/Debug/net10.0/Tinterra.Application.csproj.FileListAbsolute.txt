@@ -1,0 +1,16 @@
+C:\Users\Denise\Desktop\Tinterra.Test\src\Tinterra.Application\bin\Debug\net10.0\Tinterra.Application.deps.json
+C:\Users\Denise\Desktop\Tinterra.Test\src\Tinterra.Application\bin\Debug\net10.0\Tinterra.Application.dll
+C:\Users\Denise\Desktop\Tinterra.Test\src\Tinterra.Application\bin\Debug\net10.0\Tinterra.Application.pdb
+C:\Users\Denise\Desktop\Tinterra.Test\src\Tinterra.Application\bin\Debug\net10.0\Tinterra.Domain.dll
+C:\Users\Denise\Desktop\Tinterra.Test\src\Tinterra.Application\bin\Debug\net10.0\Tinterra.Domain.pdb
+C:\Users\Denise\Desktop\Tinterra.Test\src\Tinterra.Application\obj\Debug\net10.0\Tinterra.Application.csproj.AssemblyReference.cache
+C:\Users\Denise\Desktop\Tinterra.Test\src\Tinterra.Application\obj\Debug\net10.0\Tinterra.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Denise\Desktop\Tinterra.Test\src\Tinterra.Application\obj\Debug\net10.0\Tinterra.Application.AssemblyInfoInputs.cache
+C:\Users\Denise\Desktop\Tinterra.Test\src\Tinterra.Application\obj\Debug\net10.0\Tinterra.Application.AssemblyInfo.cs
+C:\Users\Denise\Desktop\Tinterra.Test\src\Tinterra.Application\obj\Debug\net10.0\Tinterra.Application.csproj.CoreCompileInputs.cache
+C:\Users\Denise\Desktop\Tinterra.Test\src\Tinterra.Application\obj\Debug\net10.0\Tinterra.Application.sourcelink.json
+C:\Users\Denise\Desktop\Tinterra.Test\src\Tinterra.Application\obj\Debug\net10.0\Tinterra.1F02DFAF.Up2Date
+C:\Users\Denise\Desktop\Tinterra.Test\src\Tinterra.Application\obj\Debug\net10.0\Tinterra.Application.dll
+C:\Users\Denise\Desktop\Tinterra.Test\src\Tinterra.Application\obj\Debug\net10.0\refint\Tinterra.Application.dll
+C:\Users\Denise\Desktop\Tinterra.Test\src\Tinterra.Application\obj\Debug\net10.0\Tinterra.Application.pdb
+C:\Users\Denise\Desktop\Tinterra.Test\src\Tinterra.Application\obj\Debug\net10.0\ref\Tinterra.Application.dll

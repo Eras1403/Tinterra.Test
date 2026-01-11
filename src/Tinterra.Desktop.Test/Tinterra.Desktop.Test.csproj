@@ -11,8 +11,8 @@
     <ProjectReference Include="..\Tinterra.Application\Tinterra.Application.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.6.240802000" />
-    <PackageReference Include="Microsoft.Identity.Client" Version="4.63.0" />
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.8.251106002" />
+    <PackageReference Include="Microsoft.Identity.Client" Version="4.81.0" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Package.appxmanifest" />

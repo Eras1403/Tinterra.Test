@@ -1,0 +1,6 @@
+C:\Users\Denise\Desktop\Tinterra.Test\src\Tinterra.Infrastructure.Identity\obj\Debug\net10.0\Tinterra.Infrastructure.Identity.csproj.AssemblyReference.cache
+C:\Users\Denise\Desktop\Tinterra.Test\src\Tinterra.Infrastructure.Identity\obj\Debug\net10.0\Tinterra.Infrastructure.Identity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Denise\Desktop\Tinterra.Test\src\Tinterra.Infrastructure.Identity\obj\Debug\net10.0\Tinterra.Infrastructure.Identity.AssemblyInfoInputs.cache
+C:\Users\Denise\Desktop\Tinterra.Test\src\Tinterra.Infrastructure.Identity\obj\Debug\net10.0\Tinterra.Infrastructure.Identity.AssemblyInfo.cs
+C:\Users\Denise\Desktop\Tinterra.Test\src\Tinterra.Infrastructure.Identity\obj\Debug\net10.0\Tinterra.Infrastructure.Identity.csproj.CoreCompileInputs.cache
+C:\Users\Denise\Desktop\Tinterra.Test\src\Tinterra.Infrastructure.Identity\obj\Debug\net10.0\Tinterra.Infrastructure.Identity.sourcelink.json
